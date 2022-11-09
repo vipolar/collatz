@@ -1,0 +1,13 @@
+<p>input works!</p>
+<form class="input-form">
+    <input type="text" placeholder="Search" name="search" [(ngModel)]= "inputValue">
+    <button type="button" (click)=onClickMe()>Search</button>
+</form>
+
+<h1>{{inputMessage}}</h1>
+
+<style>
+    button {
+        background-color: #b83636;
+    }
+</style>
