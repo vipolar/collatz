@@ -1,2 +1,16 @@
 <h1>Hello world!</h1>
-<app-input></app-input>
+<app-input (inputConfirmed)='handleInput($event)'></app-input>
+
+<ul *ngFor="let object of objArray">
+    <li>
+    <h4>Seed: {{object.seed}}</h4>
+    <h5>Number of operations: {{object.sumSteps}}</h5>
+    <h5>Number of 'x * 3 + 1' operations: {{object.oddSteps}}</h5>
+    <h5>Number of 'x / 2': {{object.evenSteps}}</h5>
+        <ul *ngFor="let step of object.sequence; let index = index;">
+            <li *ngIf="object.loopStart > index" style="color: black;">{{step}}</li>
+            <li *ngIf="object.loopStart == index" style="color: red;">{{step}}</li>
+            <li *ngIf="object.loopStart < index" style="color: blue;">{{step}}</li>
+        </ul>
+    </li>
+</ul>

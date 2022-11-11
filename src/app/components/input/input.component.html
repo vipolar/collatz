@@ -1,10 +1,8 @@
-<p>input works!</p>
+<p>{{inputMessage}}</p>
 <form class="input-form">
-    <input type="text" placeholder="Search" name="search" [(ngModel)]= "inputValue">
-    <button type="button" (click)=onClickMe()>Search</button>
+    <input type="text" name="input" [(ngModel)]="inputValue" placeholder="Integer input" (keydown.enter)=inputConfirm(inputValue)>
+    <button type="button" (click)=inputConfirm(inputValue)>GO</button>
 </form>
-
-<h1>{{inputMessage}}</h1>
 
 <style>
     button {
