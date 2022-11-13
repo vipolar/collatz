@@ -1,5 +1,11 @@
+<h1>Collatz Conjecture</h1>
+<!--Respond to event emitted by the 'app-input' component-->
 <app-input (inputConfirmed)='handleInput($event)'></app-input>
 
+<!--Only display 'app-chart' component if there's any data to send to it-->
+<app-chart *ngIf="objArray.length > 0" [dataArray]="objArray"></app-chart>
+
+<!--This is all temporary and ugly, everything has to be redone here!-->
 <ul *ngFor="let object of objArray">
     <li>
     <h4>Seed: {{object.seed}}</h4>

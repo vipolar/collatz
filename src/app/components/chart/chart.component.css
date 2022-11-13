@@ -2,4 +2,5 @@
     display: block;
     width: 400px;
     height: 400px;
+    float: right; /* CSS to be worked on later */
 }
