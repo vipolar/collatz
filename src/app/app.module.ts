@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { InputComponent } from './components/input/input.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
